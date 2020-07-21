@@ -1,3 +1,4 @@
+import 'package:firstapp/secondPage.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatefulWidget{
@@ -60,6 +61,16 @@ class homeState extends State<Home>{
           padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
           child: Text('${counter}',style: TextStyle(fontWeight: FontWeight.bold),),
         ),
+        SizedBox(height:30),
+        new Center(
+            child: new RaisedButton(
+              color: Colors.black,
+            onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context) => secondPage()));
+            },
+            child: Text('navigation',style: TextStyle(color: Colors.white),),
+          ),
+        )
       
        ],
      ),
